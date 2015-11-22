@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+
+/****************************************
+		1. General Setting 
+*****************************************/
+
+html, body, div, span, applet, object, iframe, strong,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, legend, caption, 
+tbody, tfoot, thead, table, label, tr, th, td{
+	/*margin: 0;*/
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	list-style:none;
+	/*color: #FFF;*/
+	}
+
+html{
+	background-color: #000;
+}
+
+
+body{
+	color: #FFF;
+	font-size: 13px;
+	line-height: 26px;
+	/*font-family: Helvetica ;*/
+	background-color: #000;
+	background-position: top;
+	background-image: url(../img/sitebg_small.jpg);
+	background-repeat: repeat;
+	background-attachment:fixed;
+	} 
+
+a{
+	color: #CCC;
+	font-weight:100;
+}
+	a:hover{
+	text-decoration: none;
+	color: #CCC;
+}
+
+.clear{ clear: both; line-height: 0}
+
+ img{
+background:none!important;
+}
+
+a:hover img{
+opacity:0.6;
+filter:alpha(opacity=60);
+-ms-filter: "alpha( opacity=60 )";
+background:none!important;
+}
+	
+.list_image {
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/****************************************
+		2. Basic Layout 
+*****************************************/
+
+#wrapaper{
+	/*width: auto;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;*/
+	
+}
+
+.main{
+	/*margin-left:auto;
+	margin-right:auto;*/
+	min-height: 100%;
+	/*padding: 3%;*/
+	text-align: center;
+	background-color: rgba(0,0,0,0.7);
+	position: relative;
+}
+
+
+
+
+
+
+
+/****************************************
+		3.  Header, Menu
+*****************************************/
+
+.navbar-custum {
+    background-color: #222;
+}
+
+#jnavi>ul>li>a {
+	color: #FFF;
+	font-family: 'SIMPLIFICA';
+	src: url(../font/SIMPLIFICA.ttf);
+	font-size: 30px;
+	font-weight: 100;
+	letter-spacing:7px;
+}
+
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus, 
+.nav-pills>li.active>a:hover,
+.nav-pills>li>a:hover  {
+	background-color: rgb(27, 27, 27);
+}
+
+.navbar-collapse {
+	padding: 0px;
+}
+
+.navbar {
+    border-radius: 0px;
+		min-height: initial;
+		min-height: auto;
+}
+
+.nav-pills>li>a {
+    border-radius: 0px;
+}
+
+/****************************************
+		4.  Main
+*****************************************/
+
+
+.ct_box{
+	position: absolute;
+	left:50%;
+	top:50%;
+	margin: -30px 0 0 -116px;
+	
+}
+
+.logo_ct{
+	width:233px;
+	/*background-image: url(../image/kzt_logo_w.png);*/
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height:60px;
+}
+
+
+.mauto{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contents_box {
+	padding-top: 15px;
+	padding-right: 30px;
+	padding-left: 15px;
+}
+
+.border_dot {
+	border-top: medium dotted #FFF;
+}
+
+.contents_title_tweet {
+	font-family: 'SIMPLIFICA';
+	src: url(../font/SIMPLIFICA.ttf);
+	font-size: 25px;
+	font-weight: 100;
+	letter-spacing:5px;
+}
+
+.contents_title {
+	font-family: 'SIMPLIFICA';
+	src: url(../font/SIMPLIFICA.ttf);
+	font-size: 33px;
+	font-weight: 100;
+	letter-spacing:8px;
+	margin-left: -13px;
+}
+
+#tweet_box {
+	background-color: rgba(255, 255, 255, 0.3);
+	margin-top: -20px;
+	margin-bottom: 50px;
+}
+
+.text_boxt {
+	text-align: left;
+	margin-bottom: 20px;
+	margin-left: -15px;
+}
