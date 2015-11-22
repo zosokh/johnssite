@@ -39,11 +39,12 @@ body{
 	background-attachment:fixed;
 	} 
 
-a{
+a, a:link{
 	color: #CCC;
 	font-weight:100;
+	text-decoration: none;
 }
-	a:hover{
+	a:hover,a:visited,a:active{
 	text-decoration: none;
 	color: #CCC;
 }
@@ -99,8 +100,8 @@ background:none!important;
 		3.  Header, Menu
 *****************************************/
 
-.navbar-custum {
-    background-color: #222;
+.navbar-inverse {
+    background-color: rgba(0, 0, 0, 0);;
 }
 
 #jnavi>ul>li>a {
@@ -115,9 +116,11 @@ background:none!important;
 .nav-pills>li.active>a,
 .nav-pills>li.active>a:focus, 
 .nav-pills>li.active>a:hover,
-.nav-pills>li>a:hover  {
+.nav-pills>li>a:hover
+  {
 	background-color: rgb(27, 27, 27);
 }
+
 
 .navbar-collapse {
 	padding: 0px;
@@ -131,6 +134,14 @@ background:none!important;
 
 .nav-pills>li>a {
     border-radius: 0px;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*width: 100%;*/
+		z-index: 10;
 }
 
 /****************************************
@@ -185,6 +196,15 @@ background:none!important;
 	font-weight: 100;
 	letter-spacing:8px;
 	margin-left: -13px;
+}
+
+
+.gototop {
+	font-family: 'SIMPLIFICA';
+	src: url(../font/SIMPLIFICA.ttf);
+	font-size: 20px;
+	font-weight: 100;
+	letter-spacing:4px;
 }
 
 #tweet_box {
