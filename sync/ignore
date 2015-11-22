@@ -1,0 +1,6 @@
+#basic
+- .DS_Store
+- .git
+- .gitignore
+- *.md
+- /sync/*

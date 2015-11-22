@@ -101,7 +101,7 @@ background:none!important;
 *****************************************/
 
 .navbar-inverse {
-    background-color: rgba(0, 0, 0, 0);;
+    background-color: #222;
 }
 
 #jnavi>ul>li>a {
@@ -121,6 +121,10 @@ background:none!important;
 	background-color: rgb(27, 27, 27);
 }
 
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: rgb(27, 27, 27); 
+}
 
 .navbar-collapse {
 	padding: 0px;
@@ -140,7 +144,8 @@ background:none!important;
     position: fixed;
     top: 0;
     left: 0;
-    /*width: 100%;*/
+    /*max-width: 1170px;*/
+		width: 100%;
 		z-index: 10;
 }
 

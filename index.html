@@ -13,41 +13,42 @@
 </head>
 
 <body>
-	<div id="wrapaper" class="container">
+	<div id="wrapaper" class="container-fluid">
 		<div class="row">
-			<div class="main col-md-10 col-md-offset-1" style="min-height:100%;">
+			<div class="main col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2" style="min-height:100%;">
 				<div id="top" class="row">
 
 					<div class="col-xs-12" style="margin-top:30px;">
 						<img src="img/toplogo.png" class="img-responsive mauto" style="width:100%;">
 					</div>
 
-					<div class="test">
+					<div class="nav_base">
+						<div class="nav_col">
 
-
-						<div class="col-xs-12 navsample" style="margin-top:30px;">
-							<nav class="navbar navbar-inverse navbar-custum" style="border-style: none;">
-								<div class="navbar-header">
-									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#jnavi">
-										<span class="sr-only">MENU</span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</button>
-								</div>
-								<div id="jnavi" class="collapse navbar-collapse">
-									<ul class="nav nav-pills nav-justified" style="color: #FFF;">
-										<li><a href="#id">News</a></li>
-										<li><a href="#live">Live</a></li>
-										<li><a href="#sound">Sound</a></li>
-										<li><a href="#bio">Biography</a></li>
-										<li><a href="#">Discography</a></li>
-										<li><a href="#">Contact</a></li>
-									</ul>
-								</div>
-							</nav>
+							<div class="col-xs-12" style="margin-top:30px;">
+								<nav class="navbar navbar-inverse navbar-custum" style="border-style: none;">
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#jnavi">
+											<span class="sr-only">MENU</span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+										</button>
+									</div>
+									<div id="jnavi" class="collapse navbar-collapse">
+										<ul class="nav nav-pills nav-justified" style="color: #FFF;">
+											<li><a href="#news">News</a></li>
+											<li><a href="#live">Live</a></li>
+											<li><a href="#sound">Sound</a></li>
+											<li><a href="#bio">Biography</a></li>
+											<li><a href="#">Discography</a></li>
+											<li><a href="#">Contact</a></li>
+										</ul>
+									</div>
+								</nav>
+							</div>
+						
 						</div>
-
 					</div>
 
 
@@ -61,7 +62,7 @@
 									<p class="contents_title_tweet">Tweets</p>
 								</div>
 								<div class="col-xs-12" id="tweet_box">
-									<a class="twitter-timeline" height="390px" href="https://twitter.com/johns_guerrilla" data-chrome="transparent" data-widget-id="668157306840879105">@johns_guerrillaさんのツイート</a>
+									<a class="twitter-timeline" height="50%" href="https://twitter.com/johns_guerrilla" data-chrome="transparent" data-widget-id="668157306840879105">@johns_guerrillaさんのツイート</a>
 								</div>
 							</div>
 						</div>
@@ -244,49 +245,51 @@
 
 
 
-		//  var nav = $('.navsample');
-		//  //表示位置
-		//  var navTop = nav.offset().top;
-		//  console.log(navTop);
-		//  //ナビゲーションの高さ（シャドウの分だけ足してます）
-		//  var navHeight = nav.height()-55;
-		//  var showFlag = false;
-		//  nav.css('top', -navHeight+'px');
-		//  //ナビゲーションの位置まできたら表示
-		//  $(window).scroll(function () {
-		// 	 var winTop = $(this).scrollTop();
-		// 	 if (winTop >= navTop) {
-		// 		 if (showFlag == false) {
-		// 			 showFlag = true;
-		// 			 $('.test').addClass('row');
-		// 			 nav
-		// 				 .addClass('fixed')
-		// 				 .stop().animate({'top' : '-30px'}, 200);
-		// 		 }
-		// 	 } else if (winTop <= navTop) {
-		// 		 if (showFlag) {
-		// 			 showFlag = false;
-		// 			 nav.stop().animate({'top' : -navHeight+'px'}, 100, function(){
-		// 				 nav.removeClass('fixed');
-		// 			 });
-		// 		 }
-		// 	 }
-		//  });
+		 var nav = $('.nav_base');
+		 //表示位置
+		 var navTop = nav.offset().top+200;
+		 //ナビゲーションの高さ（シャドウの分だけ足してます）
+		 var navHeight = nav.height()+150;
+		 var showFlag = false;
+		 nav.css('top', -navHeight+'px');
+		 //ナビゲーションの位置まできたら表示
+		 $(window).scroll(function () {
+			 var winTop = $(this).scrollTop();
+			 if (winTop >= navTop) {
+				 if (showFlag == false) {
+					 showFlag = true;
+					 nav
+						 .addClass('fixed row')
+						 .stop().animate({'top' : '-30px'}, 200);
+					 $('.nav_col').addClass('col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2');
+				 }
+			 } else if (winTop <= navTop) {
+				 if (showFlag) {
+					 showFlag = false;
+					 nav.stop().animate({'top' : -navHeight+'px'}, 100, function(){
+						 nav.removeClass('fixed row');
+						 $('.nav_col').removeClass('col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2');
+					 });
+				 }
+			 }
+		 });
 
 		// 横幅でナビゲーションの背景つける
-		$(window).on('load resize', function() {
-			var w = $(window).width();
-			var x = 768;
-			if (w <= x) {
-				$('.navbar-inverse').css({
-					'background-color': '#222'
-				});
-			} else {
-				$('.navbar-inverse').css({
-					'background-color': 'rgba(0,0,0,0)'
-				});
-			}
-		})
+		// $(window).on('load resize', function() {
+		// 	var w = $(window).width();
+		// 	var x = 768;
+		// 	if (w <= x) {
+		// 		$('.navbar-inverse').css({
+		// 			'background-color': '#222'
+		// 		});
+		// 	} else {
+		// 		$('.navbar-inverse').css({
+		// 			'background-color': 'rgba(0,0,0,0)'
+		// 		});
+		// 	}
+		// })
+		
+		
 	});
 
 
