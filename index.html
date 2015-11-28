@@ -128,10 +128,13 @@
 							<div class="col-xs-12 border_dot" style="padding-top:10px;">
 								<div class="row">
 
-									<div class="col-xs-12 text_boxt">
-										<h3>2015/12/17 Thur.　＠渋谷 star louge</h3>
+									<!-- ライブ -->
+									<div class="col-xs-12 text_boxt liveDetail">
+										<!-- 日にちと場所は必須 -->
+										<h3 class="liveVenue" data="test">2015/12/17 Thur.　＠渋谷 star louge</h3>
 										<span class="live_text">
-											<h4>「忘却」</h4>
+											<!-- タイトルは必須 -->
+											<h4 class="liveTitle">「忘却」</h4>
 										</span>
 										
 										<span class="live_text">
@@ -150,28 +153,12 @@
 										</span>
 										
 										<p class="live_text text_link">
-											<a href="mailto:info@thejohnsguerrilla.com?subject= 「12.17 忘却」予約&body=お名前(カタカナ/ニックネーム可)、枚数をご記入下さい">
+											<a href="javascript:void(0);" class="mailReserve">
 												メール予約はこちら
 											</a>
 										</p>
 									</div>
-
-									<!-- <div class="col-xs-12 text_boxt">
-										<h4>2015/12/17 Thur.　＠渋谷 star louge</h4>
-										<span class="live_text">
-											open 18:00 start 19:00<br>
-											adv ¥2000 door¥2300
-										</span>
-
-										<span class="live_text">
-											w/<br>
-											▶︎The John's Guerrilla<br>
-											▶︎Lowtide<br>
-											▶︎LAZYgunsBRISKY<br>
-											▶︎Coyote milk store<br>
-											DJ:八木橋一寛(KIWA KIWA REC)<br>
-										</span>
-									</div> -->
+									<!-- ライブ -->
 
 
 									<div class="col-xs-12" style="text-align:right;">
@@ -471,8 +458,9 @@
 		// 		});
 		// 	}
 		// })
+		
 
-
+		$('.mailReserve').click(mailReserveSubmit);
 	});
 
 
@@ -487,6 +475,17 @@
 			fjs.parentNode.insertBefore(js, fjs);
 		}
 	}(document, "script", "twitter-wjs");
+	
+	
+	var mailReserveSubmit = function() {
+		var liveVenueTxt = $(this).parents('.liveDetail').find('.liveVenue').text();
+		var liveTitleTxt = $(this).parents('.liveDetail').find('.liveTitle').text();
+		var address = 'info@thejohnsguerrilla.com';
+		var subject = liveVenueTxt + ' 『' + liveTitleTxt + '』 予約';
+		var body = 'お名前(カタカナ/ニックネーム可)、枚数をご記入下さい';
+		
+		location.href = 'mailto:' + address + '?subject=' + subject + '&body=' + body;
+	}
 </script>
 
 </html>
