@@ -221,7 +221,7 @@ background:none!important;
 
 .text_boxt {
 	text-align: left;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	margin-left: -15px;
 }
 
@@ -232,4 +232,22 @@ background:none!important;
 	display:block;
 	background-color: #CCC;
 	margin-bottom: 20px;
+}
+
+.bio_text {
+	text-align: left;
+	margin-top: 30px;
+	display:block;
+}
+
+.live_text {
+	text-align: left;
+	margin-top: 20px;
+	display:block;
+}
+
+.text_link > a{
+	color: #CCC;
+	font-weight:100;
+	text-decoration: underline;
 }
