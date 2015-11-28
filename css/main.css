@@ -67,6 +67,11 @@ background:none!important;
     overflow: hidden;
 }
 
+@font-face {
+	font-family: 'SIMPLIFICA';
+	src: url(../font/SIMPLIFICA.ttf);
+}
+
 /****************************************
 		2. Basic Layout 
 *****************************************/
@@ -107,7 +112,6 @@ background:none!important;
 #jnavi>ul>li>a {
 	color: #FFF;
 	font-family: 'SIMPLIFICA';
-	src: url(../font/SIMPLIFICA.ttf);
 	font-size: 30px;
 	font-weight: 100;
 	letter-spacing:7px;
@@ -188,7 +192,6 @@ background:none!important;
 
 .contents_title_tweet {
 	font-family: 'SIMPLIFICA';
-	src: url(../font/SIMPLIFICA.ttf);
 	font-size: 25px;
 	font-weight: 100;
 	letter-spacing:5px;
@@ -196,7 +199,6 @@ background:none!important;
 
 .contents_title {
 	font-family: 'SIMPLIFICA';
-	src: url(../font/SIMPLIFICA.ttf);
 	font-size: 33px;
 	font-weight: 100;
 	letter-spacing:8px;
@@ -206,7 +208,6 @@ background:none!important;
 
 .gototop {
 	font-family: 'SIMPLIFICA';
-	src: url(../font/SIMPLIFICA.ttf);
 	font-size: 20px;
 	font-weight: 100;
 	letter-spacing:4px;
