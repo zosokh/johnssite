@@ -18,7 +18,7 @@ tbody, tfoot, thead, table, label, tr, th, td{
 	border: 0;
 	outline: 0;
 	vertical-align: baseline;
-	list-style:none;
+	/*list-style:none;*/
 	/*color: #FFF;*/
 	}
 
@@ -223,4 +223,13 @@ background:none!important;
 	text-align: left;
 	margin-bottom: 20px;
 	margin-left: -15px;
+}
+
+.album_art {
+	text-align: left;
+	width: 100%;
+	min-height: 200px;
+	display:block;
+	background-color: #CCC;
+	margin-bottom: 20px;
 }
