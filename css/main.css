@@ -16,11 +16,10 @@ html, body, div, span, applet, object, iframe, strong, h1, h2, h3, h4, h5, h6, p
 html {
   background-color: #000;
 }
-body {
+#bodybox {
   color: #FFF;
   font-size: 13px;
   line-height: 26px;
-  /*font-family: Helvetica ;*/
   background-color: #000;
   background-position: top;
   background-image: url(../img/sitebg_small.jpg);
@@ -121,9 +120,7 @@ a:hover img {
   min-height: initial;
   min-height: auto;
 }
-.nav-pills>li>a {
-  border-radius: 0px;
-}
+
 .fixed {
   position: fixed;
   top: 0;
@@ -145,7 +142,6 @@ a:hover img {
 }
 .logo_ct {
   width: 233px;
-  /*background-image: url(../image/kzt_logo_w.png);*/
   background-position: center;
   background-repeat: no-repeat;
   min-height: 60px;
