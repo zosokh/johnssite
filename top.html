@@ -84,11 +84,6 @@
 					</div>
 				</div>
 				<!-- youtube -->
-				
-				<div class="row contents_box">
-					<div id="sampletube" class="col-xs-12" style="margin-bottom:10px;">
-					</div>
-				</div>
 
 				<div id="news" class="row contents_box" style="margin-bottom:50px;">
 					<div class="col-xs-12">
@@ -101,14 +96,13 @@
 
 									<!-- ニュース欄 -->
 									<div class="col-xs-12 text_boxt">
-										<h3>The John's Guerrillaより大切なお知らせ（2015/11/21）</h3>
-										<span style="margin-top:30px; display:block;">The John's Guerrilla結成から、演奏を共にしてきたKaname(Ba)が、年内をもって卒業いたします。</span>
-										<span style="display:block;">Kanameの卒業の理由として「自分自身の可能性を音楽以外でも広げたい」という本人の強い意志があり、</span>
-										<span style="display:block;">この結論に至った次第です。</span>
-										<span style="margin-top:20px; display:block;">Kanameの卒業式と題して12/17(木)「忘却」を渋谷star loungeで開催決定！！</span>
+										<h3>ライヴ情報更新!!（2016/03/28）</h3>
+										<span style="margin-top:30px; display:block;">詳細は「Live Schedule」へ</span>
+
+										<span style="display:block; margin-top:20px;">「Daisy Bar ~オフィシャルホームページ」</span>
 										<span style="display:block;" class="text_link">
-											<a href="#live">
-												詳しくはコチラ！！
+											<a href="http://www.daisybar.jp/" target="blank">
+												http://www.daisybar.jp/
 											</a>
 										</span>
 									</div>
@@ -155,24 +149,24 @@
 									<!-- ライブ エリア -->
 									<div class="col-xs-12 text_boxt liveDetail">
 										<!-- 日にちと場所は必須 -->
-										<h3 class="liveVenue" data="test">2015/12/17 Thur.　＠渋谷 star louge</h3>
+										<h3 class="liveVenue" data="test">2016/04/28 Thur.　＠下北沢 Daisy Bar</h3>
 										<span class="live_text">
 											<!-- タイトルは必須 -->
-											<h4 class="liveTitle">「忘却」</h4>
+											<h4 class="liveTitle">「BET IT ALL DaisyBar 11th Anniversary SPECIAL!!!」</h4>
 										</span>
 										
 										<span class="live_text">
-											open 18:00 start 19:00
-											<br> adv ¥2000 door¥2300
+											open 18:30 start 19:00
+											<br> adv ¥2300 door¥2800
 										</span>
 
 										<span class="live_text">
 											w/
 											<br> ▶︎The John's Guerrilla
-											<br> ▶︎Lowtide
-											<br> ▶︎LAZYgunsBRISKY
+											<br> ▶︎Droog
+											<br> ▶︎Walkings
 											<br> ▶︎Coyote milk store
-											<br> DJ:八木橋一寛(KIWA KIWA REC)
+											<br> ▶︎ARIZONA
 											<br>
 										</span>
 										
@@ -402,7 +396,7 @@
 									<div class="col-xs-12 text_boxt">
 										<h4>The John's Guerrilla</h4>
 										<div id="artist_imgbox" class="col-xs-12 col-md-4 " style="margin: 10px;">
-											<img src="img/dh_artistimage.jpg" style="width:100%;">
+											<img src="img/dh_artistimage_2.jpg" style="width:100%;">
 										</div>
 										<span class="bio_text">
 											2004年結成。Matsucop（Synth）Leo（Vo.）Ryoji（G.）Kaname（B.） Yusuke (Dr.) [写真左より]からなるロックバンド。
@@ -548,40 +542,6 @@
 		location.href = 'mailto:' + address + '?subject=' + subject + '&body=' + body;
 	}
 	
-	
-	
-	// youtube
-	var tag = document.createElement('script');
-	tag.src = "https://www.youtube.com/iframe_api";
-	var firstScriptTag = document.getElementsByTagName('script')[0];
-	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-	 
-	var player;
-	function onYouTubeIframeAPIReady() {
-	player = new YT.Player('sampletube', {
-	height: '503',
-	width: '1000',
-	videoId: 'lLFyTayTeWg',
-	wmode: 'transparent',
-	playerVars:{
-	'loop': '0',
-	'playlist': 'lLFyTayTeWg',
-	'rel': '0',
-	'showinfo': '1',
-	'color': 'white',
-	},
-	events: {
-	'onReady': onPlayerReady,
-	'onStateChange': onPlayerStateChange
-	}
-	});
-	}
-	function onPlayerReady(event) {
-	event.target.playVideo();
-	event.target.mute();
-	}
-	function onPlayerStateChange(event) {
-	}
 </script>
 
 </html>
